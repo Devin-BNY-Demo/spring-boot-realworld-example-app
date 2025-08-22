@@ -24,6 +24,12 @@ repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:5.5.0")
+    }
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
